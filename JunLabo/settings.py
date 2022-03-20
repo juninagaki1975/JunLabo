@@ -137,6 +137,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+import django_heroku
 
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
@@ -148,7 +149,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
-    import django_heroku #追加
-    django_heroku.settings(locals()) #追加
+    django_heroku.settings(locals())
 
     
