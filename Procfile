@@ -1,1 +1,1 @@
-web: gunicorn JunLabo.wsgi --log-file -
+web: gunicorn JunLabo.wsgi
